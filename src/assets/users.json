@@ -1,0 +1,20 @@
+[
+    {
+        "id":"1",
+        "username":"Swarna",
+        "password":"Swarna@1",
+        "email":"Swarna@gmail.com",
+        "phone":"7406343600",
+        "role":"admin"
+    },
+    {
+        "id":"2",
+        "username":"Tanuja",
+        "password":"Tanju@1",
+        "email":"Tanuja@gmail.com",
+        "phone":"8306343600",
+        "role":"user"
+    }
+    
+
+]

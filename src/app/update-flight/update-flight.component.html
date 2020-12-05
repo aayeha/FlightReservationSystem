@@ -1,0 +1,23 @@
+
+<h5 style="text-align: center;">Update Flight</h5>
+<div class="container" style="width: 400px;margin-left: auto;margin-right: auto;">
+    <form (ngSubmit)="onSubmit()">
+        Flight Number&nbsp;<input [disabled]="true" type="text" class="form-control" id="flightNo" required [(ngModel)]="flight.flightNo" name="flightNo">
+        &nbsp;
+        Carrier Name&nbsp;<input type="text" class="form-control" id="carrierName" required [(ngModel)]="flight.carrierName" name="carrierName">
+        &nbsp;
+        Source Airport&nbsp;<input type="text"  class="form-control" id="srcAirport" required [(ngModel)]="flight.srcAirport" name="srcAirport">
+        &nbsp;
+        Destination Airport&nbsp;<input type="text"  class="form-control" id="dstnAirport" required [(ngModel)]="flight.dstnAirport" name="dstnAirport">
+        &nbsp;
+        Arrival Time&nbsp;<input type="text" class="form-control" id="arrDateTime" required [(ngModel)]="flight.arrDateTime" name="arrDateTime">
+        &nbsp;
+        Depature Time&nbsp; <input type="text"  class="form-control" id="deptDateTime" required [(ngModel)]="flight.deptDateTime" name="deptDateTime">
+        &nbsp;
+        Seat capacity&nbsp;<input type="text" class="form-control" id="seatCapacity" required [(ngModel)]="flight.seatCapacity" name="seatCapacity">
+        &nbsp;
+        Available Seats&nbsp;<input type="text" class="form-control" id="availableSeats" required [(ngModel)]="flight.availableSeats" name="availableSeats">
+        &nbsp;
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>

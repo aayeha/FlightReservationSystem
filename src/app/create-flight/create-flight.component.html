@@ -1,0 +1,35 @@
+
+<div [hidden]="submitted" style="width: 400px; margin-left: auto; margin-right: auto;">
+  <form (ngSubmit)="onSubmit()">
+      Flight Number <input type="text" placeholder="Flight Number" pattern="^\d{5}$" #flightNo="ngModel" [class.is-invalid]="flightNo.invalid && flightNo.touched" class="form-control" id="flightNo" required [(ngModel)]="flight.flightNo" name="flightNo">
+      <small class="text-danger" [class.d-none]="flightNo.valid || flightNo.untouched">Number should contain 5 digits</small>
+      &nbsp;
+      Carrier Name <input type="text" placeholder="Carrier Name" #carrierName="ngModel" [class.is-invalid]="carrierName.invalid && carrierName.touched" class="form-control" id="carrierName" required [(ngModel)]="flight.carrierName" name="carrierName">
+      <small class="text-danger" [class.d-none]="carrierName.valid || carrierName.untouched">Carrier name is Required</small>
+      &nbsp;
+      Source Airport <input type="text" placeholder="Source Airport" #srcAirport="ngModel" [class.is-invalid]="srcAirport.invalid && srcAirport.touched" class="form-control" id="srcAirport" required [(ngModel)]="flight.srcAirport" name="srcAirport">
+      <small class="text-danger" [class.d-none]="srcAirport.valid || srcAirport.untouched">Source Airport is Required</small>
+      &nbsp;
+      Destination Airport <input type="text" placeholder="Destination Airport" #dstnAirport="ngModel" [class.is-invalid]="dstnAirport.invalid && dstnAirport.touched" class="form-control" id="dstnAirport" required [(ngModel)]="flight.dstnAirport" name="dstnAirport">
+      <small class="text-danger" [class.d-none]="dstnAirport.valid || dstnAirport.untouched">Destination Airport is Required</small>
+      &nbsp;
+      Arrival Time <input type="text" placeholder="Arrival Time" #arrDateTime="ngModel" [class.is-invalid]="arrDateTime.invalid && arrDateTime.touched" class="form-control" id="arrDateTime" required [(ngModel)]="flight.arrDateTime" name="arrDateIime">
+      <small class="text-danger" [class.d-none]="arrDateTime.valid || arrDateTime.untouched">Arrival time is Required</small>
+      &nbsp;
+      Depature Time <input type="text" placeholder="Depature Time" #deptDateTime="ngModel" [class.is-invalid]="deptDateTime.invalid && deptDateTime.touched" class="form-control" id="deptDateTime" required [(ngModel)]="flight.deptDateTime" name="deptDateTime">
+      <small class="text-danger" [class.d-none]="deptDateTime.valid || deptDateTime.untouched">Depature time is Required</small>
+      &nbsp;
+      Seat Capacity <input type="text" placeholder="Seat Capacity" #seatCapacity="ngModel" [class.is-invalid]="seatCapacity.invalid && seatCapacity.touched" class="form-control" id="seatCapacity" required [(ngModel)]="flight.seatCapacity" name="seatCapacity">
+        <small class="text-danger" [class.d-none]="seatCapacity.valid || seatCapacity.untouched">Seat Capacity is Required</small>
+      &nbsp;
+      Available Seats<input type="text" placeholder="Available Seats" #availableSeats="ngModel" [class.is-invalid]="availableSeats.invalid && availableSeats.touched" class="form-control" id="availableSeats" required [(ngModel)]="flight.availableSeats" name="availableSeats">
+      <small class="text-danger" [class.d-none]="availableSeats.valid || availableSeats.untouched">Available Seats are Required</small>
+    &nbsp;
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!--<button class="btn btn-success" (click)="newFlight()">Add</button>-->
+</div>

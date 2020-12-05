@@ -1,0 +1,21 @@
+
+
+<h3>Update Booking</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+      Booking ID <input type="text" class="form-control" id="bookingId" required [(ngModel)]="booking.bookingId" name="bookingId">
+       &nbsp;
+      Booking Date<input type="text" class="form-control" id="bookingDate" required [(ngModel)]="booking.bookingDate" name="bookingDate">
+      &nbsp;
+      Passenger Name<input type="text" class="form-control" id="passengerName" required [(ngModel)]="booking.passengerName" name="passengerName">
+      &nbsp;
+      Passenger Age  <input  type="text" class="form-control"id="passengerAge" required [(ngModel)]="booking.passengerAge" name="passengerAge" >
+      &nbsp;
+      Passenger UIN (Unique Identification Number) <input type="text"  class="form-control" id="passengerUIN" required [(ngModel)]="booking.passengerUIN" name="passengerUIN">
+      &nbsp;
+      Luggage <input type="text" class="form-control" id="luggage" required [(ngModel)]="booking.luggage" name="luggage"> 
+      &nbsp;
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

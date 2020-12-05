@@ -1,0 +1,26 @@
+<div class="wrapper">
+  <div class="row">
+      <div class="card col-md-4 offset-md-4 shadow-lg p-3 mb-5 bg-lightgreen">
+          <h3 style="margin-top: 20px;">Login</h3>
+          <small>With an FRS account you can make bookings and manage them quickly and easily.
+          </small>
+          <form [formGroup]="loginGroup">
+             Email:<br><span style="color:red">*</span><input type="email" name="email" placeholder="enter the email" formControlName="emailId"><br>
+            <span style="color:red" *ngIf="loginGroup.get('emailId').value==''&& loginGroup.get('emailId').touched">
+                email id is required
+              </span><br>
+              Password:<br><span style="color:red">*</span><input type="password" name="password" placeholder="enter the password" formControlName="password"><br>
+              <span style="color:red" *ngIf="loginGroup.get('password').value==''&& loginGroup.get('password').touched">
+                  password is required
+                </span><br>
+                <input type="submit" name="submit" (click)="login()">&nbsp;
+                <input type="reset" name="cancel"><br><br>
+                
+                <span style="color:blue">new user? Create Account</span>&nbsp;
+                <button (click)="routeToRegistration()">SignUp</button>
+            </form>
+            <span *ngIf="showError" style="color:red">Email and password is incorrect</span>
+          
+      </div>
+  </div>
+</div>
